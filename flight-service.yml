@@ -1,3 +1,10 @@
+# =============================================================================
+# FLIGHT SERVICE CONFIG
+# =============================================================================
+# Fetched ONLY by flight-service from Config Server.
+# Common settings (eureka, jpa defaults) come from application.yml automatically.
+# =============================================================================
+
 server:
   port: 5002
 
@@ -6,6 +13,3 @@ spring:
     url: jdbc:mysql://localhost:3306/flight_db
     username: root
     password: root
-  jpa:
-    hibernate:
-      ddl-auto: update

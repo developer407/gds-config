@@ -1,11 +1,18 @@
+# =============================================================================
+# USER SERVICE CONFIG
+# =============================================================================
+# This config is fetched ONLY by the user-service from Config Server.
+# It's loaded when user-service starts with spring.application.name=user-service.
+# Common settings (eureka, jpa defaults) come from application.yml automatically.
+# =============================================================================
+
 server:
   port: 5001
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/flight_db
+    # Each service should have its OWN database for microservice isolation.
+    # Previously this pointed to flight_db (copy-paste error).
+    url: jdbc:mysql://localhost:3306/user_db
     username: root
     password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
