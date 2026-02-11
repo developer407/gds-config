@@ -1,0 +1,17 @@
+# =============================================================================
+# API GATEWAY CONFIG
+# =============================================================================
+# Fetched ONLY by api-gateway from Config Server.
+# Common settings (eureka, jpa defaults) come from application.yml automatically.
+# =============================================================================
+
+server:
+  port: 5000
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
